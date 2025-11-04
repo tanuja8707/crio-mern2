@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 const currencyAPIUrl = 'https://api.coinbase.com/v2/currencies';
 const downloadCurrencyFromAPI = async () =>  axios.get(currencyAPIUrl);
 
@@ -28,3 +28,5 @@ const getCurrencyByName = async (req,res) => {
     }
     res.send("<h1>Currency Database</h1>")
 };
+
+export { getCurrencies, getCurrencyByName }
